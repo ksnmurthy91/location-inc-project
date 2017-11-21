@@ -1,24 +1,21 @@
-# README
+<h1>Baseball Statistics</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<p class="lead"> This project is to display the baseball statistics table of 
+the players who played in the year 1998</p>
 
-Things you may want to cover:
+To achieve the pagination, sorting and searching functionality without reloading the page
+we need the usage of javascript libraries like jquery.
 
-* Ruby version
+To parse the xml, we need xml parsers like Nokogiri.
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+At this point, this is still incomplete:
 
-* Database initialization
+1)Calculating the statistics using the formulae and appending them.<br />
+2)Need to tweak my bootstrap gem installation a bit to render pagination and sort layout.<br />
+3)Setting the default sort
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...

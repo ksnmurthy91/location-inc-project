@@ -2,7 +2,6 @@
   <div class="jumbotron">
     <h1>Baseball Player Statistics</h1>
   </div>
-
   <table id="baseball" class="table table-striped table-hover">
     <thead>
       <tr>
@@ -19,7 +18,7 @@
       <% @outputs.each do |output| %>
         <tr>
           <td><%= output.css('GIVEN_NAME').text + " " + output.css('SURNAME').text %> </td>
-          <td>division(<%= output.css('HITS').text %>,<%= output.css('AT_BATS').text %>)</td>
+          <td><%= output.css('HITS').text %>/<%= output.css('AT_BATS').text %></td>
           <td><%= output.css('HOME_RUNS').text %></td>
           <td><%= output.css('RBI').text %></td>
           <td><%= output.css('RUNS').text %></td>
@@ -32,16 +31,15 @@
 
 </div>
 
+
+<script type="text/javascript" src="datatables.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/dataTables.bootstrap4.min.js"></script>
+<link href="datatables.css" rel="stylesheet" />
+<link href="css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="css/dataTables.bootstrap4.min.css" rel="stylesheet" />
 <script type="text/javascript">
-
-   function division(x,y) {
-       if (x!=0 && y!=0) {
-           return x / y;
-       }
-       else{
-           return 0;
-       }
-   }
-
-
+    $(document).ready(function() {
+        $('#baseball').dataTable();
+    } );
 </script>
